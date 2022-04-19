@@ -47,28 +47,30 @@ league_two = ['Barrow', 'Bradford City', 'Bristol Rovers', 'Carlisle', 'Colchest
 # premierLeaugeFixtures = []
 # premierLeaugeFixtures.append(fixtures)
 # print(premierLeaugeFixtures)
+
 premierRound = premier
 premierLeaugeFixtures = []
 while (len(premierRound) > 0):
   firstTeam = premier[random.randrange(0, len(premier))]
   secondTeam = premier[random.randrange(0, len(premier))]
-
+  goalsHome = random.randint(0,4)
+  goalsAway = random.randint(0,4)
   if (firstTeam == secondTeam):
     firstTeam = premier[random.randrange(0, len(premier))]
     secondTeam = premier[random.randrange(0, len(premier))]
 
-  print(firstTeam)
-  print("")
-  print("*"*100)
-  print(secondTeam)
-  print("")
+  # print(firstTeam)
+  # print("")
+  # print("*"*100)
+  # print(secondTeam)
+  # print("")
 
   home = []
   home.append(firstTeam)
   # print(home)
   away = []
   away.append(secondTeam)
-  gameMatch = f"{firstTeam} - {secondTeam}" 
+  gameMatch = f"{firstTeam} {goalsHome} - {goalsAway} {secondTeam}" 
   fixtures = [home, away]
   # print(fixtures)
 

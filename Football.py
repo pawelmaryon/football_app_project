@@ -14,6 +14,9 @@ league_one = ['AFC Wimbledon', 'Accrington Stanley', 'Bolton', 'Burton', 'Cambri
 
 league_two = ['Barrow', 'Bradford City', 'Bristol Rovers', 'Carlisle', 'Colchester', 'Crawley Town', 'Exeter City', 'Forest Green', 'Harrogate Town', 'Hartlepool', 'Leyton Orient', 'Mansfield Town',
               'Newport County', 'Northampton Town', 'Oldham Athletic', 'Port Vale', 'Rochdale', 'Salford City', 'Scunthorpe', 'Stevenage', 'Sutton United', 'Swindon Town', 'Tranmere', 'Walsall']
+
+# ***********************************************************************************************************************************
+
 # print("")
 # print("*"*100)
 # print("")
@@ -48,37 +51,40 @@ league_two = ['Barrow', 'Bradford City', 'Bristol Rovers', 'Carlisle', 'Colchest
 # premierLeaugeFixtures.append(fixtures)
 # print(premierLeaugeFixtures)
 
+# ***********************************************************************************************************************************
+
 premierRound = premier
 premierLeaugeFixtures = []
+
 while (len(premierRound) > 0):
   firstTeam = premier[random.randrange(0, len(premier))]
   secondTeam = premier[random.randrange(0, len(premier))]
   goalsHome = random.randint(0,4)
   goalsAway = random.randint(0,4)
-  if (firstTeam == secondTeam):
-    firstTeam = premier[random.randrange(0, len(premier))]
-    secondTeam = premier[random.randrange(0, len(premier))]
-
-  # print(firstTeam)
+  if (firstTeam != secondTeam):
+    # firstTeam = premier[random.randrange(0, len(premier))]
+    # secondTeam = premier[random.randrange(0, len(premier))]
+# ***********************************************************************************************************************************
+    # print(firstTeam)
   # print("")
   # print("*"*100)
-  # print(secondTeam)
+    # print(secondTeam)
   # print("")
-
-  home = []
-  home.append(firstTeam)
-  # print(home)
-  away = []
-  away.append(secondTeam)
-  gameMatch = f"{firstTeam} {goalsHome} - {goalsAway} {secondTeam}" 
-  fixtures = [home, away]
-  # print(fixtures)
-
-  premierLeaugeFixtures.append(gameMatch)
-  premierRound.remove(firstTeam)
-  premierRound.remove(secondTeam)
-  
-
+# ***********************************************************************************************************************************
+    home = []
+    home.append(firstTeam)
+    # print(home)
+    away = []
+    away.append(secondTeam)
+    gameMatch = f"{firstTeam} {goalsHome} - {goalsAway} {secondTeam}" 
+    fixtures = [home, away]
+    # print(fixtures)
+    # premierRound.remove(firstTeam)
+    # premierRound.remove(secondTeam)
+    premierLeaugeFixtures.append(gameMatch)
+    print(premierRound)
+    del premierRound[premier.index(firstTeam)]
+    del premierRound[premier.index(secondTeam)]
 # print(premierLeaugeFixtures)
 for i in range(len(premierLeaugeFixtures)):
   print(premierLeaugeFixtures[i])

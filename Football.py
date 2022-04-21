@@ -1,6 +1,7 @@
 import random
 import time
 import pprint
+from premierLeague import *
 
 
 premier = ["Arsenal", "Aston Villa", "Brentford", "Brighton and Hove Albion", "Burnley", "Chelsea", "Crystal Palace", "Everton", "Leeds United", "Leicester City", "Liverpool",
@@ -14,6 +15,12 @@ league_one = ['AFC Wimbledon', 'Accrington Stanley', 'Bolton', 'Burton', 'Cambri
 
 league_two = ['Barrow', 'Bradford City', 'Bristol Rovers', 'Carlisle', 'Colchester', 'Crawley Town', 'Exeter City', 'Forest Green', 'Harrogate Town', 'Hartlepool', 'Leyton Orient', 'Mansfield Town',
               'Newport County', 'Northampton Town', 'Oldham Athletic', 'Port Vale', 'Rochdale', 'Salford City', 'Scunthorpe', 'Stevenage', 'Sutton United', 'Swindon Town', 'Tranmere', 'Walsall']
+
+defensiveStrength = range(1, 11)
+midfieldStrength = range(1, 11)
+offensiveStrength = range(1, 11)
+
+
 
 # ***********************************************************************************************************************************
 

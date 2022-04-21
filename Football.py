@@ -89,7 +89,11 @@ while (len(premierRound) > 0):
 for i in range(len(premierLeaugeFixtures)):
   print(premierLeaugeFixtures[i])
 # extracting two teams done 
-
+with open("./file1.txt", "a") as textFile:
+  for i in range(len(premierLeaugeFixtures)):
+    textFile.write(f"{i+1}. {premierLeaugeFixtures[i]}\n ")
+  textFile.write("----------------------------------------------- \n")
+  
 
 
 # Markos Code
